@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="البورتفوليو الشخصي لـ Abdelrahman Mastour - مهندس شبكات ومختبر اختراق (Penetration Tester)">
+    <title>Abdelrahman Mastour | Penetration Tester Portfolio</title>
+    
+    <!-- الخطوط والأيقونات -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent-color: #38bdf8;
+            --accent-hover: #0284c7;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --border-color: #334155;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding: 20px 10px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header / Hero Section */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, rgba(30,41,59,0.5) 0%, rgba(15,23,42,0) 100%);
+            border-bottom: 1px solid var(--border-color);
+            border-radius: 12px;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header .tagline {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            color: var(--text-primary);
+            background: var(--card-bg);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        /* General Section Styling */
+        section {
+            margin-bottom: 50px;
+        }
+
+        section h2 {
+            font-size: 1.6rem;
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-bottom: 25px;
+        }
+
+        /* About & Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .skill-tag {
+            background-color: var(--card-bg);
+            color: var(--text-primary);
+            padding: 8px 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 0.9rem;
+            border: 1px solid var(--border-color);
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+      .card {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 25px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+        }
+
+        .card h3 {
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: var(--accent-color);
+            color: #0f172a;
+            padding: 10px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background-color 0.3s ease;
+            width: fit-content;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+            color: #ffffff;
+        }
+
+        /* Contact Section */
+        .contact-box {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 25px;
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+        }
+
+        .contact-item i {
+            color: var(--accent-color);
+        }
+
+        .contact-item a {
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            color: var(--text-secondary);
+            padding: 30px 0;
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            header .tagline { font-size: 1rem; }
+            .projects-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header / Hero -->
+        <header>
+            <h1>Abdelrahman Mastour</h1>
+            <p class="tagline"><i class="fa-solid fa-shield-halved"></i> Network Engineer & Penetration Tester</p>
+            
+            <div class="social-links">
+                <a href="https://github.com/YOUR_USERNAME" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://linkedin.com/in/YOUR_USERNAME" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="mailto:your.email@example.com" title="البريد الإلكتروني"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </header>
+
+        <!-- About Section -->
+        <section id="about">
+            <h2>نبذة عني</h2>
+            <p>متخصص في الأمن السيبراني واختبار الاختراق مع خلفية متينة في هندسة الشبكات. أمتلك خبرة عملية في تقييم أمان التطبيقات والمواقع، تحليل الثغرات، وإعداد تقارير فنية ودقيقة لتأمين البنى التحتية البرمجية والشبكية.</p>
+            
+            <div class="skills-grid">
+                <div class="skill-tag"><i class="fa-solid fa-bug"></i> Web Pentesting</div>
+                <div class="skill-tag"><i class="fa-solid fa-network-wired"></i> Network Security</div>
+                <div class="skill-tag"><i class="fa-solid fa-terminal"></i> Linux / Bash</div>
+                <div class="skill-tag"><i class="fa-solid fa-magnifying-glass"></i> Vulnerability Assessment</div>
+            </div>
+        </section>
+        <!-- Projects / Portfolio -->
+        <section id="projects">
+            <h2>التقارير ومعرض الأعمال</h2>
+            
+            <div class="projects-grid">
+                <!-- Card 1 -->
+                <div class="card">
+                    <div>
+                        <h3><i class="fa-regular fa-file-lines"></i> تقرير فحص أمان موقع (DVWA / XVWA)</h3>
+                        <p>تقرير تقييم أمني شامل يشرح خطوات اكتشاف واختبار ثغرات مثل SQL Injection وXSS مع تقديم الحلول البرمجية لترقيعها.</p>
+                    </div>
+                    <a href="YOUR_DOCUMENT_URL_HERE" target="_blank" class="btn">
+                        <span>عرض التقرير (PDF)</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <div>
+                        <h3><i class="fa-solid fa-flag"></i> توثيق حلول CTF & Write-ups</h3>
+                        <p>مجموعة من التوثيقات التفصيلية لحل أجهزة اختبار الاختراق على منصات مثل TryHackMe وVulnHub لمهارات الاستطلاع واختراق الويب.</p>
+                    </div>
+                    <a href="YOUR_WRITEUPS_URL_HERE" target="_blank" class="btn">
+                        <span>قراءة التوثيق</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>التواصل</h2>
+            <div class="contact-box">
+                <div class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>البريد الإلكتروني: <a href="mailto:abdomastor93@gmail.com">your.email@example.com</a></span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span>LinkedIn: <a href="https://linkedin.com/in/abdelrahman-mastour-6206b433a" target="_blank">linkedin.com/in/AbdelrahmanMastour</a></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© <span id="year"></span> Abdelrahman Mastour. جميع الحقوق محفوظة.</p>
+        </footer>
+    </div>
+
+    <!-- Script لإضافة السنة تلقائياً -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
